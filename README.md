@@ -4,7 +4,7 @@ I'm doing online challenges here, taken from Frontend Mentor, Roadmap.sh, and et
 
 ## Check the live preview here:
 
-Latest work: [Tip Calculator App](https://imhefizh.github.io/FrontEnd-Lab/tip-calculator-app-main)
+Latest work: [Interactive Rating Component](https://imhefizh.github.io/FrontEnd-Lab/interactive-rating-component-main)
 
 Previous works:
 
