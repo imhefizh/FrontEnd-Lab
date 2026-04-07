@@ -1,0 +1,158 @@
+:root {
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-800: #313742;
+  --grey-900: #242932;
+  --grey-950: #181e27;
+  --bg: #141518;
+  --orange: hsl(25, 97%, 53%);
+
+  --font: 400 1rem "Overpass", sans-serif;
+}
+
+html {
+  font: var(--font);
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 2rem;
+  padding: 0px 1.6rem;
+}
+
+.card {
+  background-image: linear-gradient(
+    to bottom,
+    var(--grey-900),
+    var(--grey-950)
+  );
+  border-radius: 1.2rem;
+  padding: 2rem;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.card h1 {
+  font-weight: 500;
+}
+
+.card .text {
+  color: var(--grey-500);
+  line-height: 1.5;
+}
+
+.rating {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating-item {
+  background-color: var(--grey-800);
+  height: clamp(2.5rem, 10vw, 3.5rem);
+  width: clamp(2.5rem, 10vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--grey-500);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-item:hover {
+  background-color: var(--orange);
+  color: white;
+}
+
+.submit-btn {
+  background-color: var(--orange);
+  color: var(--grey-900);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  padding-top: 0.85rem;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: var(--grey-950);
+}
+
+.selected {
+  background-color: white;
+  color: var(--grey-900);
+}
+
+.selected:hover {
+  background-color: white;
+  color: var(--grey-900);
+}
+
+.hidden {
+  display: none;
+}
+
+.star {
+  background-color: var(--grey-800);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.selected-rating {
+  background-color: var(--grey-800);
+  color: var(--orange);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+footer {
+  position: absolute;
+  bottom: calc(80vh / 100vh * 20px);
+  padding: 0px 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  font-weight: 600;
+  color: var(--orange);
+}

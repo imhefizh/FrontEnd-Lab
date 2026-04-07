@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/breakpoint-base.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <article class="card" id="rating-card">
+        <img src="images/icon-star.svg" alt="" class="star" />
+
+        <h1 id="header">How did we do?</h1>
+        <p class="text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <ul class="rating" role="radiogroup" aria-labelledby="header">
+          <li class="rating-item" data-rating="1" role="radio" tabindex="0">
+            1
+          </li>
+          <li class="rating-item" data-rating="2" role="radio" tabindex="0">
+            2
+          </li>
+          <li class="rating-item" data-rating="3" role="radio" tabindex="0">
+            3
+          </li>
+          <li class="rating-item" data-rating="4" role="radio" tabindex="0">
+            4
+          </li>
+          <li class="rating-item" data-rating="5" role="radio" tabindex="0">
+            5
+          </li>
+        </ul>
+
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </article>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <article class="card hidden" id="thank-you-card" aria-live="polite">
+        <div class="container">
+          <img src="images/illustration-thank-you.svg" alt="Thank you" />
+        </div>
+        <div class="container">
+          <p class="selected-rating">
+            You selected <span id="selected-rating">0</span> out of 5
+          </p>
+        </div>
+        <div class="container">
+          <h2>Thank you!</h2>
+        </div>
+        <div class="container">
+          <p class="text">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </article>
+      <!-- Thank you state end -->
+    </main>
+
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Maulana Hafidz Ismail</a>.
+    </footer>
+  </body>
+</html>
