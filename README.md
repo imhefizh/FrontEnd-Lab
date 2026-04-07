@@ -18,3 +18,4 @@ Previous works:
 8. [Newsletter Sign Up with Success Message](https://imhefizh.github.io/FrontEnd-Lab/newsletter-sign-up-with-success-message-main)
 9. [Time Tracking Dashboard](https://imhefizh.github.io/FrontEnd-Lab/time-tracking-dashboard-main)
 10. [Tip Calculator App](https://imhefizh.github.io/FrontEnd-Lab/tip-calculator-app-main)
+11. [Interactive Rating Component](https://imhefizh.github.io/FrontEnd-Lab/interactive-rating-component-main)
