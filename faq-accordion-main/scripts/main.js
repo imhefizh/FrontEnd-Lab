@@ -1,10 +1,10 @@
 // Change background pattern based on screen size
 if (window.innerWidth < 600) {
   document.getElementById("background-pattern").src =
-    "../assets/images/background-pattern-mobile.svg";
+    "./assets/images/background-pattern-mobile.svg";
 } else {
   document.getElementById("background-pattern").src =
-    "../assets/images/background-pattern-desktop.svg";
+    "./assets/images/background-pattern-desktop.svg";
 }
 
 // FAQ Accordion functionality
@@ -12,7 +12,7 @@ const faqItems = document.querySelectorAll("article");
 
 faqItems.forEach((article) => {
   const button = article.querySelector("button").querySelector("img");
-  button.src = "../assets/images/icon-plus.svg";
+  button.src = "./assets/images/icon-plus.svg";
 
   article.addEventListener("click", () => {
     faqItems.forEach((faqItem) => {
@@ -26,7 +26,7 @@ faqItems.forEach((article) => {
         const otherButton = faqItem
           .querySelector("button")
           .querySelector("img");
-        otherButton.src = "../assets/images/icon-plus.svg";
+        otherButton.src = "./assets/images/icon-plus.svg";
       }
     });
 
@@ -43,9 +43,9 @@ faqItems.forEach((article) => {
 
     content.setAttribute("aria-hidden", content.classList.contains("hidden"));
     if (content.classList.contains("hidden")) {
-      button.src = "../assets/images/icon-plus.svg";
+      button.src = "./assets/images/icon-plus.svg";
     } else {
-      button.src = "../assets/images/icon-minus.svg";
+      button.src = "./assets/images/icon-minus.svg";
     }
   });
 });
