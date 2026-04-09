@@ -1,0 +1,151 @@
+:root {
+  --color-purple-100: hsl(275, 100%, 97%);
+  --color-purple-600: hsl(292, 16%, 49%);
+  --color-purple-300: #9f34e2;
+  --color-purple-950: hsl(292, 42%, 14%);
+
+  --font: 400 1rem "Work Sans", sans-serif;
+}
+
+html {
+  font: var(--font);
+  font-size: 16px; /* 1rem */
+}
+
+body {
+  background-color: var(--color-purple-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+section {
+  margin: 0 1.3rem;
+  background-color: white;
+  border-radius: 0.7rem;
+  box-shadow: 0 0.625rem 1.25rem hsl(292, 42%, 14%, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+#star {
+  width: 1.8rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+article:not(:last-child) {
+  border-bottom: 1px solid hsl(292, 42%, 14%, 0.1);
+}
+
+section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  color: var(--color-purple-950);
+}
+
+section h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  flex: 1;
+  line-height: 1.4rem;
+  color: var(--color-purple-950);
+  margin-top: 0.5rem;
+}
+
+article:has(> p.hidden) h3:hover {
+  color: var(--color-purple-300);
+  cursor: pointer;
+}
+
+section button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+section p {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  color: var(--color-purple-600);
+  margin-top: 0.5rem;
+  max-height: 1000px;
+  opacity: 1;
+  transition:
+    max-height 0.2s ease,
+    opacity 0.1s ease;
+  overflow: hidden;
+}
+
+.justify-between {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.hidden {
+  max-height: 0;
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.margin-1 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: calc(80vh / 100vh * 20px);
+  padding: 0px 1.8rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  font-weight: 600;
+  color: var(--color-purple-950);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
