@@ -1,0 +1,14 @@
+@media (width > 1024px) {
+  #form-section {
+    padding: 2rem;
+  }
+
+  #form-section form fieldset div {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #form-section form fieldset label {
+    width: 100%;
+  }
+}

@@ -1,0 +1,262 @@
+/* palette */
+:root {
+  --color-green-200: hsl(148, 38%, 91%);
+  --color-green-600: hsl(169, 82%, 27%);
+  --color-green-900: #2f4143;
+  --color-red: hsl(0, 66%, 54%);
+  --color-grey-500: rgb(135, 163, 166);
+  --color-grey-900: rgb(43, 66, 70);
+
+  --font: 400 1rem "Karla", sans-serif;
+}
+
+/* cores */
+html {
+  font: var(--font);
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  background-color: var(--color-green-200);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* --------- */
+
+/* form section */
+#form-section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem 1rem;
+}
+
+/* form title */
+#form-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--color-grey-900);
+  font-weight: 700;
+}
+
+/* form */
+#form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#form-section
+  form
+  input:not(#general-enquiry):not(#support-request):not(#consent):focus,
+textarea:focus {
+  border: 3px solid var(--color-green-600) !important;
+  outline: none;
+}
+
+#form-section
+  form
+  input:not(#general-enquiry):not(#support-request):not(#consent):hover,
+textarea:hover {
+  border: 3px solid var(--color-green-600) !important;
+  outline: none;
+}
+
+#form-section form .opt:has(input:checked) {
+  border: 1px solid var(--color-green-600);
+  background-color: rgba(6, 161, 83, 0.205);
+  accent-color: var(--color-green-600);
+}
+
+#form-section form #consent {
+  accent-color: var(--color-green-600);
+}
+
+#form-section form label:not(:has(input)),
+legend {
+  color: var(--color-grey-900);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+#form-section form span {
+  color: var(--color-green-600);
+}
+
+#form-section form input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-grey-500);
+  border-radius: 0.5rem;
+  height: 1.5rem;
+}
+
+#form-section form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--color-grey-500);
+  border-radius: 0.5rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form-section form fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-grey-500);
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+#form-section form fieldset div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: fit-content;
+}
+
+#form-section form button {
+  background-color: var(--color-green-600);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+#form-section form button:hover {
+  background-color: var(--color-green-900);
+}
+
+#form-section form .error-message {
+  color: var(--color-red);
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+#form-section form .error {
+  border: 3px solid var(--color-red) !important;
+}
+
+#form-section form .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.consent-label {
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.consent-label:hover {
+  color: var(--color-green-600) !important;
+}
+
+.consent-label:focus {
+  color: var(--color-green-600) !important;
+}
+/* ------------------ */
+
+/* notification */
+#notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  transition:
+    opacity 0.5s ease,
+    transform 1s ease;
+  top: 0;
+}
+
+.hide-notification {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+#success-message {
+  flex-direction: column;
+  gap: 0.7rem;
+  background-color: var(--color-green-900);
+  color: #fff;
+  padding: 1.4rem;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  position: absolute;
+  border-radius: 0.7rem;
+  top: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+#success-message p {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+/* ------------------ */
+
+/* peripheral */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.margin-consent {
+  margin: 0.3rem !important;
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: fit-content;
+  font-size: 0.9rem;
+}
+
+.help-text {
+  font-size: 0.8rem;
+  color: var(--color-green-900);
+  margin-top: 0.7rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+/*  ------------------ */
+
+/* attribution */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* ------------------ */

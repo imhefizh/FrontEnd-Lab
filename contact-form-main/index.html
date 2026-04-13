@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/breakpoint-base.css" />
+    <link rel="stylesheet" href="./styles/breakpoint-1024px.css" />
+    <!-- Scripts -->
+    <script type="module" defer src="./scripts/main.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div
+        id="accessibility-helper"
+        class="visually-hidden"
+        aria-live="polite"
+      ></div>
+
+      <section
+        id="notification"
+        class="unclickable hide-notification"
+        aria-live="polite"
+        role="alert"
+        aria-hidden="true"
+      >
+        <div id="success-message">
+          <div class="flex-centered">
+            <img
+              src="./assets/images/icon-success-check.svg
+            "
+              alt="Success Check Icon"
+            />
+            Message sent!
+          </div>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </section>
+      <section id="form-section">
+        <h1>Contact Us</h1>
+
+        <form action="" novalidate>
+          <div class="wrapper">
+            <div class="container">
+              <label for="first-name">First Name <span>*</span></label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                class=""
+                required
+                autocomplete="given-name"
+                aria-describedby="first-name-error"
+                aria-invalid="false"
+              />
+              <p
+                class="error-message hidden"
+                id="first-name-error"
+                aria-live="polite"
+                aria-hidden="true"
+              >
+                This first name field is required
+              </p>
+            </div>
+
+            <div class="container">
+              <label for="last-name">Last Name <span>*</span></label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                class=""
+                required
+                autocomplete="family-name"
+                aria-describedby="last-name-error"
+                aria-invalid="false"
+              />
+              <p
+                class="error-message hidden"
+                id="last-name-error"
+                aria-live="polite"
+                aria-hidden="true"
+              >
+                This last name field is required
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <label for="email">Email Address <span>*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class=""
+              required
+              autocomplete="email"
+              aria-describedby="email-error"
+              aria-invalid="false"
+            />
+            <p
+              class="error-message hidden"
+              id="email-error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              Please enter a valid email address
+            </p>
+          </div>
+
+          <fieldset>
+            <legend>Query Type <span>*</span></legend>
+
+            <div role="radiogroup" id="query-type" aria-invalid="false">
+              <label class="opt" for="general-enquiry">
+                <input
+                  type="radio"
+                  id="general-enquiry"
+                  name="query-type"
+                  value="general-enquiry"
+                  aria-describedby="query-type-error"
+                  required
+                />
+                General Enquiry
+              </label>
+              <label class="opt" for="support-request">
+                <input
+                  type="radio"
+                  id="support-request"
+                  name="query-type"
+                  value="support-request"
+                  aria-describedby="query-type-error"
+                  required
+                />
+                Support Request
+              </label>
+            </div>
+
+            <p
+              class="error-message hidden"
+              id="query-type-error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              Please select a query type
+            </p>
+            <p
+              class="help-text hidden"
+              id="query-type-help"
+              aria-live="polite"
+              aria-hidden="true"
+              role="alert"
+            >
+              Use the arrow keys to navigate the options
+            </p>
+          </fieldset>
+
+          <div class="container">
+            <label for="message">Message <span>*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              aria-describedby="message-error"
+              aria-invalid="false"
+              required
+            ></textarea>
+            <p
+              class="error-message hidden"
+              id="message-error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              This message field is required
+            </p>
+          </div>
+
+          <div>
+            <div id="consent" class="flex-centered">
+              <input
+                type="checkbox"
+                name="consent"
+                id="consent-checkbox"
+                required
+                aria-describedby="consent-error"
+                aria-invalid="false"
+                aria-label="I consent to being contacted by the team"
+                tabindex="-1"
+              />
+              <label for="consent-checkbox" class="consent-label" tabindex="0">
+                I consent to being contacted by the team <span>*</span>
+              </label>
+            </div>
+            <p
+              class="margin-consent error-message hidden"
+              id="consent-error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Maulana Hafidz Ismail</a>.
+    </footer>
+  </body>
+</html>
